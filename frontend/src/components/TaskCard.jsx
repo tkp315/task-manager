@@ -60,6 +60,12 @@ export default function TaskCard({ task }) {
         </p>
       )}
 
+      {task.completedAt && (
+        <p className="text-xs text-green-600 ml-7">
+          Completed at: {new Date(task.completedAt).toLocaleString()}
+        </p>
+      )}
+
       {isOverdue && (
         <p className="text-xs font-semibold text-red-500 bg-red-50 rounded-lg px-3 py-2 ml-7">
           Hurry up! This task is overdue.

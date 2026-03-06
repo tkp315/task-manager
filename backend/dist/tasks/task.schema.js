@@ -30,6 +30,7 @@ let Task = class Task {
     priority;
     dueDate;
     status;
+    completedAt;
 };
 exports.Task = Task;
 __decorate([
@@ -56,6 +57,10 @@ __decorate([
     (0, mongoose_1.Prop)({ enum: Status, default: Status.TODO }),
     __metadata("design:type", String)
 ], Task.prototype, "status", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ default: null }),
+    __metadata("design:type", Date)
+], Task.prototype, "completedAt", void 0);
 exports.Task = Task = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true })
 ], Task);

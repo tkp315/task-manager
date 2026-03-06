@@ -38,6 +38,7 @@ let TasksService = class TasksService {
         }
         task.completed = !task.completed;
         task.status = task.completed ? 'done' : 'todo';
+        task.completedAt = task.completed ? new Date() : null;
         return task.save();
     }
 };

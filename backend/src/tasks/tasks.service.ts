@@ -27,6 +27,7 @@ export class TasksService {
 
     task.completed = !task.completed;
     task.status = task.completed ? 'done' as any : 'todo' as any;
+    task.completedAt = task.completed ? new Date() : null;
     return task.save();
   }
 }

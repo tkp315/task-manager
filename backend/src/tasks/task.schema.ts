@@ -34,6 +34,9 @@ export class Task {
 
   @Prop({ enum: Status, default: Status.TODO })
   status: Status;
+
+  @Prop({ default: null })
+  completedAt: Date;
 }
 
 export const TaskSchema = SchemaFactory.createForClass(Task);
