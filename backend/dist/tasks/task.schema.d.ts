@@ -17,7 +17,7 @@ export declare class Task {
     priority: Priority;
     dueDate: Date;
     status: Status;
-    completedAt: Date;
+    completedAt: Date | null;
 }
 export declare const TaskSchema: import("mongoose").Schema<Task, import("mongoose").Model<Task, any, any, any, (Document<unknown, any, Task, any, import("mongoose").DefaultSchemaOptions> & Task & {
     _id: import("mongoose").Types.ObjectId;
@@ -92,7 +92,7 @@ export declare const TaskSchema: import("mongoose").Schema<Task, import("mongoos
     }, "id"> & {
         id: string;
     }> | undefined;
-    completedAt?: import("mongoose").SchemaDefinitionProperty<Date, Task, Document<unknown, {}, Task, {
+    completedAt?: import("mongoose").SchemaDefinitionProperty<Date | null, Task, Document<unknown, {}, Task, {
         id: string;
     }, import("mongoose").DefaultSchemaOptions> & Omit<Task & {
         _id: import("mongoose").Types.ObjectId;
